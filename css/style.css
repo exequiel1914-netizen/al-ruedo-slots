@@ -45,3 +45,78 @@ body{
 @media (prefers-reduced-motion:reduce){
   .reel .slot{transition:none !important}
 }
+/* ===== ANIMACION DE RODILLOS ===== */
+
+.reel.spinning{
+
+  box-shadow:
+
+    inset 0 0 18px rgba(20,180,255,.18),
+
+    0 0 14px rgba(20,160,255,.10);
+
+}
+
+.reel.spinning img.symbol{
+
+  animation: reel-motion 120ms linear infinite;
+
+  filter:
+
+    blur(.6px)
+
+    drop-shadow(0 6px 10px rgba(0,140,255,.25));
+
+}
+
+@keyframes reel-motion{
+
+  0%{
+
+    transform:translateY(-5px) scale(.97);
+
+  }
+
+  50%{
+
+    transform:translateY(5px) scale(1.02);
+
+  }
+
+  100%{
+
+    transform:translateY(-5px) scale(.97);
+
+  }
+
+}
+
+/* BONUS y estrella con vida propia */
+
+img.symbol[alt="logo-bonus"],
+
+img.symbol[alt="estrella"]{
+
+  animation:symbol-breathe 2.2s ease-in-out infinite;
+
+}
+
+@keyframes symbol-breathe{
+
+  0%,100%{
+
+    transform:scale(1);
+
+    filter:drop-shadow(0 4px 8px rgba(0,120,255,.18));
+
+  }
+
+  50%{
+
+    transform:scale(1.06);
+
+    filter:drop-shadow(0 7px 14px rgba(30,190,255,.36));
+
+  }
+
+}
