@@ -174,10 +174,11 @@ function evaluateGrid(grid) {
     for (let col = 0; col < grid[row].length; col++) {
       const symbol = grid[row][col];
 
-      counts[symbol] = (counts[symbol] || 0) + 1;
-
       if (symbol === 'logo-bonus') {
-        bonusCount++;
+  bonusCount++;
+} else {
+  counts[symbol] = (counts[symbol] || 0) + 1;
+}
       }
     }
 
@@ -242,7 +243,28 @@ async function onSpin() {
 
   const result = evaluateGrid(getGrid());
 
-  if (result.totalWin > 0) {
+  if if (result.bonusCount >= 3) {
+  audio.play('bonus');
+
+  showMessage(
+    `💥 BONUS! ${result.bonusCount} LOGOS 💥`,
+    3000
+  );
+
+} else if (result.totalWin > 0) {
+  credits += result.totalWin;
+  updateCreditsDisplay();
+
+  audio.play('win');
+
+  showMessage(
+    `Ganaste ${result.totalWin} (x${result.multiplier})`,
+    2000
+  );
+
+} else {
+  showMessage('No hay combinación', 1200);
+}
     credits += result.totalWin;
     updateCreditsDisplay();
 
