@@ -145,3 +145,23 @@ body{
     max-height:90%;
   }
 }
+/* ===== SPIN METALLIC BLUE ===== */
+
+.btn.spin{
+  background:
+    linear-gradient(180deg,#19b8ff 0%,#0874c9 48%,#03477f 100%);
+  border:1px solid rgba(150,225,255,.55);
+  color:#fff;
+  box-shadow:
+    0 8px 20px rgba(0,90,180,.35),
+    inset 0 1px 0 rgba(255,255,255,.32),
+    inset 0 -3px 8px rgba(0,20,60,.35);
+  text-shadow:0 2px 4px rgba(0,0,0,.45);
+}
+
+.btn.spin:active{
+  transform:translateY(1px);
+  box-shadow:
+    0 4px 12px rgba(0,90,180,.28),
+    inset 0 2px 6px rgba(0,20,60,.4);
+}
