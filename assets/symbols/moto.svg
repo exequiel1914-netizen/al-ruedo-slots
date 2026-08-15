@@ -1,79 +1,158 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220">
   <defs>
     <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#58c7ff"/>
-      <stop offset="0.5" stop-color="#0878d1"/>
-      <stop offset="1" stop-color="#003c7d"/>
+      <stop offset="0" stop-color="#39c8ff"/>
+      <stop offset=".45" stop-color="#078bd5"/>
+      <stop offset="1" stop-color="#004b88"/>
     </linearGradient>
-    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f5fbff"/>
-      <stop offset="0.5" stop-color="#8da2b2"/>
-      <stop offset="1" stop-color="#354552"/>
+
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1fbff"/>
+      <stop offset=".5" stop-color="#9eb8c8"/>
+      <stop offset="1" stop-color="#526975"/>
     </linearGradient>
   </defs>
 
-  <!-- ruedas -->
-  <circle cx="72" cy="151" r="31" fill="#111820" stroke="#9eb4c3" stroke-width="5"/>
-  <circle cx="72" cy="151" r="14" fill="#536a79" stroke="#d9edf7" stroke-width="4"/>
-  <circle cx="229" cy="151" r="31" fill="#111820" stroke="#9eb4c3" stroke-width="5"/>
-  <circle cx="229" cy="151" r="14" fill="#536a79" stroke="#d9edf7" stroke-width="4"/>
+  <!-- RUEDA TRASERA -->
+  <circle cx="82" cy="166" r="39" fill="#07131b"
+          stroke="#9bb8c8" stroke-width="6"/>
+  <circle cx="82" cy="166" r="20" fill="#203d4c"
+          stroke="#26bfff" stroke-width="5"/>
 
-  <!-- guardabarros delantero -->
-  <path d="M202 121 Q230 103 256 126" fill="none" stroke="#47baff" stroke-width="9" stroke-linecap="round"/>
+  <!-- RUEDA DELANTERA -->
+  <circle cx="281" cy="166" r="39" fill="#07131b"
+          stroke="#9bb8c8" stroke-width="6"/>
+  <circle cx="281" cy="166" r="20" fill="#203d4c"
+          stroke="#26bfff" stroke-width="5"/>
 
-  <!-- cuadro / chasis -->
-  <path d="M82 137 L119 96 L180 105 L216 139"
-        fill="none" stroke="url(#metal)" stroke-width="10"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- GUARDABARROS TRASERO -->
+  <path d="M48 142 Q80 112 112 139"
+        fill="none" stroke="#087fc0"
+        stroke-width="11" stroke-linecap="round"/>
 
-  <!-- carrocería tipo 110 -->
-  <path d="M103 94
-           Q116 71 145 70
-           L181 74
-           Q195 77 199 89
-           L183 112
-           L145 115
-           L124 137
-           L96 130
+  <!-- ESCAPE -->
+  <path d="M125 160
+           Q170 178 226 168"
+        fill="none" stroke="url(#silver)"
+        stroke-width="11" stroke-linecap="round"/>
+
+  <!-- CUADRO -->
+  <path d="M92 151
+           L135 108
+           L206 111
+           L250 157"
+        fill="none" stroke="#9eb6c5"
+        stroke-width="10"
+        stroke-linejoin="round"
+        stroke-linecap="round"/>
+
+  <!-- COLÍN / BAJO ASIENTO -->
+  <path d="M92 105
+           Q115 87 157 87
+           L188 92
+           L175 111
+           L111 119
            Z"
-        fill="url(#blue)" stroke="#bdeaff" stroke-width="4"/>
+        fill="url(#blue)"
+        stroke="#8ee2ff"
+        stroke-width="4"/>
 
-  <!-- cubre piernas -->
-  <path d="M172 80
-           Q188 72 198 79
-           L211 123
-           L188 125
-           L172 99 Z"
-        fill="#0877c9" stroke="#bdeaff" stroke-width="4"/>
+  <!-- ASIENTO LARGO DE 110 -->
+  <path d="M91 89
+           Q128 73 177 79
+           Q190 80 194 88
+           L185 98
+           L105 100
+           Q94 98 91 89 Z"
+        fill="#101b23"
+        stroke="#8ca3b1"
+        stroke-width="4"/>
 
-  <!-- asiento -->
-  <path d="M112 72 Q145 58 181 67 L176 78 L113 82 Z"
-        fill="#171d24" stroke="#8194a2" stroke-width="3"/>
+  <!-- CARENADO CENTRAL -->
+  <path d="M121 111
+           L180 101
+           L203 116
+           L181 150
+           L133 151
+           L105 137 Z"
+        fill="url(#blue)"
+        stroke="#8ee2ff"
+        stroke-width="4"/>
 
-  <!-- horquilla -->
-  <path d="M199 88 L225 143" stroke="#c7d8e2" stroke-width="7" stroke-linecap="round"/>
+  <!-- CUBREPIERNAS CURVO -->
+  <path d="M183 96
+           Q207 86 220 102
+           L246 143
+           L211 148
+           L187 124
+           Z"
+        fill="url(#blue)"
+        stroke="#a6e9ff"
+        stroke-width="4"/>
 
-  <!-- manubrio -->
-  <path d="M191 77 L207 58 L229 58"
-        fill="none" stroke="#d5e7f1" stroke-width="6"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- MOTOR -->
+  <path d="M145 132
+           Q160 123 180 132
+           L184 154
+           Q163 166 141 153 Z"
+        fill="#657c89"
+        stroke="#d4e7ef"
+        stroke-width="4"/>
 
-  <!-- faro -->
-  <path d="M205 67 Q219 64 225 75 Q218 86 204 81 Z"
-        fill="#f5f0b4" stroke="#e9fbff" stroke-width="3"/>
+  <!-- HORQUILLA DELANTERA -->
+  <path d="M219 100 L270 161"
+        stroke="url(#silver)"
+        stroke-width="8"
+        stroke-linecap="round"/>
 
-  <!-- escape -->
-  <path d="M128 131 Q166 148 201 145"
-        fill="none" stroke="#8195a3" stroke-width="8" stroke-linecap="round"/>
+  <!-- MANUBRIO -->
+  <path d="M211 96
+           L221 72
+           L249 63"
+        fill="none"
+        stroke="#cbe2ec"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
-  <!-- motor -->
-  <rect x="130" y="112" width="38" height="30" rx="7"
-        fill="#667b89" stroke="#d4e5ee" stroke-width="4"/>
+  <!-- PUÑO -->
+  <path d="M246 63 L263 61"
+        stroke="#10232c"
+        stroke-width="8"
+        stroke-linecap="round"/>
 
-  <!-- detalle 110 -->
-  <text x="132" y="105"
+  <!-- FARO / MÁSCARA -->
+  <path d="M213 77
+           Q231 72 240 85
+           Q234 101 216 98
+           Q207 88 213 77 Z"
+        fill="#eafaff"
+        stroke="#22baff"
+        stroke-width="4"/>
+
+  <!-- GUARDABARROS DELANTERO -->
+  <path d="M247 135
+           Q282 112 316 141"
+        fill="none"
+        stroke="#129edc"
+        stroke-width="11"
+        stroke-linecap="round"/>
+
+  <!-- ESTRIBO -->
+  <path d="M168 158 L201 158"
+        stroke="#d5e7ef"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <!-- DETALLE -->
+  <path d="M119 122 L165 113"
+        stroke="#dff7ff"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <text x="126" y="139"
         font-family="Arial, sans-serif"
-        font-size="20"
+        font-size="18"
         font-weight="900"
         font-style="italic"
         fill="#ffffff">110</text>
