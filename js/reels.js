@@ -86,6 +86,9 @@ export default class Reels{
           const midSlot = slots[middleIndex];
           if(midSlot){
             midSlot.classList.add('impact');
+            // dispatch custom event so other parts of the app can react (e.g., play per-reel stop sound)
+            const ev = new CustomEvent('reel:stopped', {detail:{index}});
+            document.dispatchEvent(ev);
             // remove impact after the pulse
             setTimeout(()=>{
               midSlot.classList.remove('impact');
@@ -93,6 +96,9 @@ export default class Reels{
               setTimeout(()=>reel.classList.remove('stopped'), 260);
             }, 220);
           } else {
+            // still dispatch event even if no midSlot
+            const ev = new CustomEvent('reel:stopped', {detail:{index}});
+            document.dispatchEvent(ev);
             // ensure we still resolve
             setTimeout(()=>reel.classList.remove('stopped'), 260);
           }
