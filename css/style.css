@@ -58,8 +58,8 @@ body{
 
 /* symbol base */
 .reel img.symbol{
-  max-width:78%;
-  max-height:78%;
+  max-width:92%;
+  max-height:92%;
   transition:filter 300ms ease, transform 220ms ease;
   -webkit-transform-origin:center;
   transform-origin:center;
