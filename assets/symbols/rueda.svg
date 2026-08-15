@@ -1,19 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <radialGradient id="rimRad" cx="0.3" cy="0.3"><stop offset="0" stop-color="#eaffff"/><stop offset="1" stop-color="#032f3a"/></radialGradient>
+    <radialGradient id="rim" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#dffcff"/>
+      <stop offset="35%" stop-color="#7adfff"/>
+      <stop offset="70%" stop-color="#179cff"/>
+      <stop offset="100%" stop-color="#0a355a"/>
+    </radialGradient>
+
+    <radialGradient id="hub" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#c8f6ff"/>
+      <stop offset="100%" stop-color="#0a2336"/>
+    </radialGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#26b8ff" flood-opacity="0.55"/>
+    </filter>
+
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="3" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
   </defs>
 
-  <!-- outer tyre -->
-  <circle cx="100" cy="100" r="78" fill="#04121a"/>
-  <!-- rim -->
-  <circle cx="100" cy="100" r="56" fill="url(#rimRad)" stroke="#0aa6ff" stroke-width="6"/>
-  <!-- spokes (clear, few, thick for legibility) -->
-  <g transform="translate(100,100)" stroke="#022a33" stroke-width="4">
-    <line x1="0" y1="-6" x2="0" y2="-48"/>
-    <line x1="-6" y1="0" x2="-48" y2="0"/>
-    <line x1="6" y1="0" x2="48" y2="0"/>
-    <line x1="0" y1="6" x2="0" y2="48"/>
+  <!-- sombra -->
+  <ellipse cx="60" cy="103" rx="28" ry="7" fill="#000814" opacity="0.45"/>
+
+  <!-- cubierta -->
+  <circle cx="60" cy="58" r="42" fill="#020b14" filter="url(#shadow)"/>
+  <circle cx="60" cy="58" r="36" fill="#081521"/>
+  <circle cx="60" cy="58" r="31" fill="url(#rim)" filter="url(#glow)"/>
+
+  <!-- aro -->
+  <circle cx="60" cy="58" r="29" fill="none" stroke="#41c8ff" stroke-width="3"/>
+  <circle cx="60" cy="58" r="24" fill="#071521" stroke="#0b2b43" stroke-width="1.5"/>
+
+  <!-- rayos -->
+  <g stroke="#d8f8ff" stroke-width="3.2" stroke-linecap="round" opacity="0.95">
+    <line x1="60" y1="36" x2="60" y2="80"/>
+    <line x1="38" y1="58" x2="82" y2="58"/>
+    <line x1="45" y1="43" x2="75" y2="73"/>
+    <line x1="75" y1="43" x2="45" y2="73"/>
+    <line x1="52" y1="37" x2="68" y2="79"/>
+    <line x1="68" y1="37" x2="52" y2="79"/>
   </g>
-  <!-- hub -->
-  <circle cx="100" cy="100" r="16" fill="#021418" stroke="#80e8ff" stroke-width="2.6"/>
+
+  <!-- centro -->
+  <circle cx="60" cy="58" r="10" fill="url(#hub)" stroke="#90ecff" stroke-width="2"/>
+  <circle cx="60" cy="58" r="4" fill="#03131f" stroke="#6edfff" stroke-width="1"/>
 </svg>
