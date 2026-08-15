@@ -1,67 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
   <defs>
-    <linearGradient id="bodyGrad" x1="0" x2="1">
-      <stop offset="0" stop-color="#0bf" />
-      <stop offset="1" stop-color="#02384f" />
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#58c7ff"/>
+      <stop offset="0.5" stop-color="#0878d1"/>
+      <stop offset="1" stop-color="#003c7d"/>
     </linearGradient>
-    <linearGradient id="chromeGrad" x1="0" x2="1">
-      <stop offset="0" stop-color="#f7feff"/>
-      <stop offset="0.5" stop-color="#bfeeff"/>
-      <stop offset="1" stop-color="#083142"/>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5fbff"/>
+      <stop offset="0.5" stop-color="#8da2b2"/>
+      <stop offset="1" stop-color="#354552"/>
     </linearGradient>
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
-  <!-- Wheels (clear, high-contrast for small sizes) -->
-  <g id="wheels">
-    <circle cx="56" cy="136" r="30" fill="#031017"/>
-    <circle cx="56" cy="136" r="20" fill="url(#chromeGrad)" stroke="#0aa6ff" stroke-width="3"/>
-    <circle cx="144" cy="136" r="30" fill="#031017"/>
-    <circle cx="144" cy="136" r="20" fill="url(#chromeGrad)" stroke="#0aa6ff" stroke-width="3"/>
-  </g>
+  <!-- ruedas -->
+  <circle cx="72" cy="151" r="31" fill="#111820" stroke="#9eb4c3" stroke-width="5"/>
+  <circle cx="72" cy="151" r="14" fill="#536a79" stroke="#d9edf7" stroke-width="4"/>
+  <circle cx="229" cy="151" r="31" fill="#111820" stroke="#9eb4c3" stroke-width="5"/>
+  <circle cx="229" cy="151" r="14" fill="#536a79" stroke="#d9edf7" stroke-width="4"/>
 
-  <!-- Exhaust (identifiable) -->
-  <g id="exhaust" transform="translate(0,0)">
-    <path d="M140 110 C150 108 160 112 168 118" stroke="url(#chromeGrad)" stroke-width="6" stroke-linecap="round" fill="none"/>
-    <ellipse cx="170" cy="120" rx="6" ry="4" fill="#06151a"/>
-  </g>
+  <!-- guardabarros delantero -->
+  <path d="M202 121 Q230 103 256 126" fill="none" stroke="#47baff" stroke-width="9" stroke-linecap="round"/>
 
-  <!-- Frame / tank / seat / engine -->
-  <g id="frame" transform="translate(0,0)">
-    <!-- tank -->
-    <path d="M64 78 C84 64 110 60 134 68 C142 72 148 78 152 86 L136 92 C128 88 108 86 90 92 C74 96 66 92 64 90 Z"
-          fill="url(#bodyGrad)" stroke="url(#chromeGrad)" stroke-width="1.8"/>
-    <!-- tank number 110 (small) -->
-    <text x="96" y="78" font-size="10" font-weight="700" text-anchor="middle" fill="#dffaff" opacity="0.95">110</text>
-    <!-- seat -->
-    <path d="M92 94 L126 88 L138 96 L110 104 Z" fill="#071421" stroke="#0aa6ff" stroke-width="1.2"/>
-    <!-- engine block (recognizable cylinders) -->
-    <g transform="translate(84,98)">
-      <rect x="-14" y="2" width="28" height="18" rx="3" fill="#072027" stroke="url(#chromeGrad)" stroke-width="1.2"/>
-      <rect x="-22" y="8" width="8" height="6" rx="1" fill="#071f22"/>
-      <rect x="14" y="8" width="8" height="6" rx="1" fill="#071f22"/>
-    </g>
-    <!-- small details: bolts -->
-    <circle cx="96" cy="118" r="3" fill="#0aa6ff"/>
-  </g>
+  <!-- cuadro / chasis -->
+  <path d="M82 137 L119 96 L180 105 L216 139"
+        fill="none" stroke="url(#metal)" stroke-width="10"
+        stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Handlebars and headlight (headlight has id=headlight for animation) -->
-  <g id="front" transform="translate(0,0)">
-    <path d="M150 64 L168 52" stroke="#072a3a" stroke-width="4" stroke-linecap="round"/>
-    <g id="headlight">
-      <ellipse cx="152" cy="76" rx="10" ry="8" fill="#f2fbff" stroke="url(#chromeGrad)" stroke-width="1.2"/>
-      <path class="glint" d="M142 70 C146 66 150 64 154 68" fill="none" stroke="#e7fdff" stroke-width="1" opacity="0.9"/>
-    </g>
-  </g>
+  <!-- carrocería tipo 110 -->
+  <path d="M103 94
+           Q116 71 145 70
+           L181 74
+           Q195 77 199 89
+           L183 112
+           L145 115
+           L124 137
+           L96 130
+           Z"
+        fill="url(#blue)" stroke="#bdeaff" stroke-width="4"/>
 
-  <!-- silhouette outline for readability on dark bg -->
-  <path d="M24 124 L44 120 C50 96 64 86 86 86 C110 86 134 96 146 112 L170 112" fill="none" stroke="rgba(10,160,255,0.08)" stroke-width="10" stroke-linecap="round"/>
+  <!-- cubre piernas -->
+  <path d="M172 80
+           Q188 72 198 79
+           L211 123
+           L188 125
+           L172 99 Z"
+        fill="#0877c9" stroke="#bdeaff" stroke-width="4"/>
 
-  <!-- subtle outer glow to help read on dark panel -->
-  <g filter="url(#soft)" opacity="0.6">
-    <ellipse cx="100" cy="118" rx="72" ry="44" fill="none" stroke="rgba(10,160,255,0.06)" stroke-width="10"/>
-  </g>
+  <!-- asiento -->
+  <path d="M112 72 Q145 58 181 67 L176 78 L113 82 Z"
+        fill="#171d24" stroke="#8194a2" stroke-width="3"/>
+
+  <!-- horquilla -->
+  <path d="M199 88 L225 143" stroke="#c7d8e2" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- manubrio -->
+  <path d="M191 77 L207 58 L229 58"
+        fill="none" stroke="#d5e7f1" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- faro -->
+  <path d="M205 67 Q219 64 225 75 Q218 86 204 81 Z"
+        fill="#f5f0b4" stroke="#e9fbff" stroke-width="3"/>
+
+  <!-- escape -->
+  <path d="M128 131 Q166 148 201 145"
+        fill="none" stroke="#8195a3" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- motor -->
+  <rect x="130" y="112" width="38" height="30" rx="7"
+        fill="#667b89" stroke="#d4e5ee" stroke-width="4"/>
+
+  <!-- detalle 110 -->
+  <text x="132" y="105"
+        font-family="Arial, sans-serif"
+        font-size="20"
+        font-weight="900"
+        font-style="italic"
+        fill="#ffffff">110</text>
 </svg>
