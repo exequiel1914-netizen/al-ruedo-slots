@@ -1,15 +1,13 @@
-# 🎰 Al Ruedo Slots
+# Al Ruedo Slots - MVP
 
-Una tragamonedas web temática de motos y taller, creada para jugar directamente desde el navegador.
+Esta rama contiene una versión MVP jugable en navegador (optimizada para iPhone) con 5 rodillos x 3 filas, créditos virtuales y detección básica de premios.
 
-## 🏍️ Temática
+Cómo probar (rápido):
+- Abrir index.html desde la rama `feature/mvp-al-ruedo-slots`.
+- Usar RawGit/RawGithack para servir el HTML: https://raw.githack.com/exequiel1914-netizen/al-ruedo-slots/feature/mvp-al-ruedo-slots/index.html
 
-- Motos
-- Herramientas
-- Repuestos
-- Taller mecánico
-- Bonus especial de Al Ruedo
-
-## 🎮 Objetivo
-
-Hacer girar los rodillos, conseguir combinaciones ganadoras y activar el bonus especial de **Al Ruedo**.
+Notas técnicas:
+- Implementado con JavaScript puro (ES modules).
+- Símbolos como SVG placeholder en `assets/symbols/`.
+- Sonidos generados por WebAudio (no requiere archivos externos).
+- Controles: SPIN, apuesta +/-, MUTE.

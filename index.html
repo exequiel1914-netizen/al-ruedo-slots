@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Al Ruedo Slots - MVP</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <img src="assets/symbols/logo-bonus.svg" alt="Al Ruedo" class="logo">
+      <div class="balance">Créditos: <span id="credits">0</span></div>
+    </header>
+
+    <main class="game-area">
+      <div id="reels" class="reels" aria-hidden="false"></div>
+
+      <div class="overlay message" id="message" hidden></div>
+    </main>
+
+    <footer class="controls">
+      <div class="bet-controls">
+        <button id="betDec" class="btn small">-</button>
+        <div class="bet">Apuesta: <span id="bet">0</span></div>
+        <button id="betInc" class="btn small">+</button>
+      </div>
+
+      <div class="action-row">
+        <button id="mute" class="btn small">🔊</button>
+        <button id="spin" class="btn spin">SPIN</button>
+        <button id="info" class="btn small">i</button>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
