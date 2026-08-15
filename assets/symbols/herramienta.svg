@@ -1,7 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="12" fill="#0f1113" />
-  <g fill="#e6e9eb">
-    <rect x="36" y="42" width="48" height="12" rx="6" fill="#ff5e1a" />
-    <rect x="44" y="62" width="32" height="8" rx="4" fill="#9aa0a6" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8eef2"/>
+      <stop offset=".25" stop-color="#7d8993"/>
+      <stop offset=".55" stop-color="#252d34"/>
+      <stop offset=".78" stop-color="#aeb8bf"/>
+      <stop offset="1" stop-color="#414b54"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00d4ff"/>
+      <stop offset=".5" stop-color="#008cff"/>
+      <stop offset="1" stop-color="#004ac7"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- sombra -->
+  <ellipse cx="100" cy="169" rx="58" ry="9"
+           fill="#000" opacity=".65"/>
+
+  <!-- llave combinada diagonal -->
+  <g transform="rotate(-38 100 100)">
+
+    <!-- mango -->
+    <path d="M88 64
+             L112 64
+             L108 137
+             Q107 150 100 157
+             Q93 150 92 137 Z"
+          fill="url(#steel)"
+          stroke="#151b20"
+          stroke-width="4"/>
+
+    <!-- inserto azul -->
+    <path d="M96 79
+             L104 79
+             L103 132
+             Q102 139 100 142
+             Q98 139 97 132 Z"
+          fill="url(#blue)"
+          filter="url(#glow)"/>
+
+    <!-- boca abierta -->
+    <path d="M82 68
+             Q65 58 63 42
+             L76 51
+             L91 43
+             L94 25
+             Q111 30 119 43
+             Q125 54 118 68
+             Q110 79 100 79
+             Q90 79 82 68 Z"
+          fill="url(#steel)"
+          stroke="#151b20"
+          stroke-width="4"/>
+
+    <!-- hueco de la boca -->
+    <path d="M79 48
+             L91 55
+             L105 48
+             Q107 57 101 63
+             Q94 69 87 63
+             Q81 58 79 48 Z"
+          fill="#05080b"/>
+
+    <!-- extremo estrella -->
+    <circle cx="100" cy="150" r="18"
+            fill="url(#steel)"
+            stroke="#151b20"
+            stroke-width="4"/>
+
+    <circle cx="100" cy="150" r="9"
+            fill="#05080b"
+            stroke="#00bfff"
+            stroke-width="3"/>
+
+    <!-- reflejo -->
+    <path d="M94 82 L96 125"
+          stroke="#ffffff"
+          stroke-width="3"
+          stroke-linecap="round"
+          opacity=".35"/>
   </g>
+
+  <!-- pequeño sello AR -->
+  <circle cx="145" cy="145" r="14"
+          fill="#080d12"
+          stroke="#00bfff"
+          stroke-width="3"/>
+
+  <text x="145" y="150"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="700"
+        fill="#ffffff">AR</text>
 </svg>
