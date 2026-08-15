@@ -243,7 +243,7 @@ async function onSpin() {
 
   const result = evaluateGrid(getGrid());
 
-  if if (result.bonusCount >= 3) {
+  if (result.bonusCount >= 3) {
   let bonusMultiplier = 10;
 
   if (result.bonusCount === 4) {
