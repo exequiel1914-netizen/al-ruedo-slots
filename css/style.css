@@ -177,3 +177,14 @@ body{
     padding-top:45px;
   }
 }
+/* ===== SUBIR CONTROLES ===== */
+
+.controls{
+  transform:translateY(-90px);
+}
+
+@media (max-width:600px){
+  .controls{
+    transform:translateY(-80px);
+  }
+}
