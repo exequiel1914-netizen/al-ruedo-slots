@@ -1,6 +1,6 @@
 import { AudioManager, UI } from './ui.js';
 
-const const SYMBOLS = [
+const SYMBOLS = [
   'moto',
   'casco',
   'rueda',
