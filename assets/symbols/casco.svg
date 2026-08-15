@@ -1,7 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="12" fill="#0f1113" />
-  <g fill="#e6e9eb">
-    <ellipse cx="60" cy="60" rx="28" ry="22" fill="#222" />
-    <rect x="46" y="40" width="28" height="8" rx="3" fill="#ff5e1a" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="helmetMetal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#343e48"/>
+      <stop offset=".35" stop-color="#080d12"/>
+      <stop offset=".7" stop-color="#111a22"/>
+      <stop offset="1" stop-color="#53606b"/>
+    </linearGradient>
+
+    <linearGradient id="visor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9cecff"/>
+      <stop offset=".2" stop-color="#168dd0"/>
+      <stop offset=".55" stop-color="#06121c"/>
+      <stop offset=".8" stop-color="#007dca"/>
+      <stop offset="1" stop-color="#00c8ff"/>
+    </linearGradient>
+
+    <linearGradient id="blueAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#006cff"/>
+      <stop offset=".5" stop-color="#00c8ff"/>
+      <stop offset="1" stop-color="#0057d8"/>
+    </linearGradient>
+
+    <filter id="blueGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- sombra -->
+  <ellipse cx="100" cy="169" rx="60" ry="10"
+           fill="#000000" opacity=".65"/>
+
+  <!-- cuerpo principal -->
+  <path d="M39 112
+           Q38 60 70 38
+           Q98 18 132 37
+           Q158 52 163 88
+           Q166 112 153 133
+           L139 151
+           Q128 162 109 164
+           L70 161
+           Q51 158 44 142
+           Q39 129 39 112 Z"
+        fill="url(#helmetMetal)"
+        stroke="#66727d"
+        stroke-width="5"/>
+
+  <!-- parte inferior / mentonera -->
+  <path d="M47 117
+           L77 119
+           Q102 124 143 112
+           L154 123
+           Q147 147 128 157
+           L73 157
+           Q52 150 47 132 Z"
+        fill="#070b0f"
+        stroke="#323d47"
+        stroke-width="4"/>
+
+  <!-- visor -->
+  <path d="M52 72
+           Q80 47 126 52
+           Q145 55 155 70
+           L147 100
+           Q111 114 66 104
+           Q55 99 50 91 Z"
+        fill="url(#visor)"
+        stroke="#111820"
+        stroke-width="5"/>
+
+  <!-- reflejo del visor -->
+  <path d="M65 69
+           Q91 55 124 61"
+        fill="none"
+        stroke="#d9f8ff"
+        stroke-width="5"
+        stroke-linecap="round"
+        opacity=".8"/>
+
+  <path d="M72 79
+           Q91 68 108 69"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="2"
+        stroke-linecap="round"
+        opacity=".65"/>
+
+  <!-- línea azul Al Ruedo -->
+  <path d="M48 119
+           Q78 130 107 126
+           Q132 123 151 110"
+        fill="none"
+        stroke="url(#blueAccent)"
+        stroke-width="6"
+        stroke-linecap="round"
+        filter="url(#blueGlow)"/>
+
+  <!-- ventilación -->
+  <path d="M88 139 L112 139"
+        stroke="#68747e"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <path d="M94 146 L106 146"
+        stroke="#00bfff"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- insignia AR -->
+  <circle cx="67" cy="132" r="10"
+          fill="#05080b"
+          stroke="#00bfff"
+          stroke-width="2"/>
+
+  <text x="67" y="136"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        font-weight="700"
+        fill="#ffffff">AR</text>
 </svg>
