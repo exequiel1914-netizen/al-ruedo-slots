@@ -1,19 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220">
   <defs>
-    <linearGradient id="motorG" x1="0" x2="1"><stop offset="0" stop-color="#dffbff"/><stop offset="1" stop-color="#012a32"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#718a99"/>
+      <stop offset=".25" stop-color="#e7f5fb"/>
+      <stop offset=".5" stop-color="#8099a8"/>
+      <stop offset=".75" stop-color="#d8edf5"/>
+      <stop offset="1" stop-color="#627b89"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#45d2ff"/>
+      <stop offset=".5" stop-color="#0796d8"/>
+      <stop offset="1" stop-color="#005c9c"/>
+    </linearGradient>
   </defs>
 
-  <!-- block -->
-  <rect x="18" y="44" width="164" height="70" rx="10" fill="#04171a" stroke="#0aa6ff" stroke-width="2"/>
-  <!-- cylinders -->
-  <g transform="translate(36,56)" fill="url(#motorG)" stroke="#0aa6ff" stroke-width="1.2">
-    <rect x="0" y="0" width="36" height="46" rx="4"/>
-    <rect x="44" y="0" width="36" height="46" rx="4"/>
-    <rect x="88" y="0" width="36" height="46" rx="4"/>
+  <!-- MANGUERA SUPERIOR -->
+  <path d="M190 58
+           C220 42 245 48 257 68
+           L268 83"
+        fill="none"
+        stroke="#17252d"
+        stroke-width="18"
+        stroke-linecap="round"/>
+
+  <path d="M190 58
+           C220 42 245 48 257 68"
+        fill="none"
+        stroke="#35bff3"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- CUERPO EXTERIOR -->
+  <rect x="52" y="55"
+        width="157" height="118"
+        rx="13"
+        fill="#142630"
+        stroke="#41caff"
+        stroke-width="8"/>
+
+  <!-- TANQUES LATERALES -->
+  <rect x="40" y="68"
+        width="22" height="91"
+        rx="8"
+        fill="url(#blue)"
+        stroke="#b8ecff"
+        stroke-width="4"/>
+
+  <rect x="201" y="68"
+        width="22" height="91"
+        rx="8"
+        fill="url(#blue)"
+        stroke="#b8ecff"
+        stroke-width="4"/>
+
+  <!-- NÚCLEO -->
+  <rect x="67" y="69"
+        width="127" height="90"
+        rx="5"
+        fill="url(#metal)"
+        stroke="#d7edf5"
+        stroke-width="4"/>
+
+  <!-- ALETAS VERTICALES -->
+  <g stroke="#304b59" stroke-width="5">
+    <line x1="80" y1="73" x2="80" y2="155"/>
+    <line x1="94" y1="73" x2="94" y2="155"/>
+    <line x1="108" y1="73" x2="108" y2="155"/>
+    <line x1="122" y1="73" x2="122" y2="155"/>
+    <line x1="136" y1="73" x2="136" y2="155"/>
+    <line x1="150" y1="73" x2="150" y2="155"/>
+    <line x1="164" y1="73" x2="164" y2="155"/>
+    <line x1="178" y1="73" x2="178" y2="155"/>
   </g>
-  <!-- pipes / bolts -->
-  <g transform="translate(28,118)" fill="#021618" stroke="#0aa6ff" stroke-width="1.6">
-    <circle cx="12" cy="6" r="6"/>
-    <circle cx="136" cy="6" r="6"/>
+
+  <!-- ALETAS HORIZONTALES -->
+  <g stroke="#8fc6dc" stroke-width="3">
+    <line x1="69" y1="86" x2="192" y2="86"/>
+    <line x1="69" y1="103" x2="192" y2="103"/>
+    <line x1="69" y1="120" x2="192" y2="120"/>
+    <line x1="69" y1="137" x2="192" y2="137"/>
   </g>
+
+  <!-- CUELLO / TAPA -->
+  <path d="M92 55 L92 40 Q92 31 102 31 H132 Q142 31 142 40 V55"
+        fill="#667f8e"
+        stroke="#d9edf5"
+        stroke-width="5"/>
+
+  <rect x="96" y="24"
+        width="42" height="15"
+        rx="6"
+        fill="#16252d"
+        stroke="#45caff"
+        stroke-width="4"/>
+
+  <!-- MANGUERA INFERIOR -->
+  <path d="M207 150
+           C244 151 253 166 247 189"
+        fill="none"
+        stroke="#17252d"
+        stroke-width="17"
+        stroke-linecap="round"/>
+
+  <path d="M209 150
+           C235 151 245 160 244 174"
+        fill="none"
+        stroke="#35bff3"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- BRILLO -->
+  <path d="M72 64 H180"
+        stroke="#ffffff"
+        stroke-opacity=".55"
+        stroke-width="4"
+        stroke-linecap="round"/>
 </svg>
