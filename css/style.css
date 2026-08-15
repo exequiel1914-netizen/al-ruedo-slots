@@ -90,3 +90,58 @@ body{
 @media (prefers-reduced-motion:reduce){
   .moto-win { animation: none !important; transform:none !important; }
 }
+/* ===== AJUSTE VISUAL TABLERO - SOLO ESTETICA ===== */
+
+.reels{
+  width:100%;
+  max-width:680px;
+  height:clamp(270px,38vh,360px);
+  padding:10px;
+  gap:6px;
+  border:1px solid rgba(10,166,255,.22);
+  border-radius:18px;
+  background:linear-gradient(180deg,#11161b,#090c0f);
+  box-shadow:
+    0 14px 35px rgba(0,0,0,.65),
+    inset 0 0 22px rgba(10,166,255,.05);
+}
+
+.reel{
+  min-width:0;
+  height:100%;
+  border-radius:12px;
+  border:1px solid rgba(10,166,255,.12);
+  background:linear-gradient(180deg,#10161c,#0a0f13);
+}
+
+.reel .slot{
+  min-height:0;
+  padding:4px;
+}
+
+.reel img.symbol{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:88%;
+  max-height:88%;
+  object-fit:contain;
+  filter:drop-shadow(0 5px 8px rgba(0,0,0,.45));
+}
+
+@media (max-width:600px){
+  .reels{
+    height:clamp(250px,36vh,330px);
+    padding:7px;
+    gap:4px;
+  }
+
+  .reel .slot{
+    padding:3px;
+  }
+
+  .reel img.symbol{
+    max-width:90%;
+    max-height:90%;
+  }
+}
