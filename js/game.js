@@ -180,7 +180,7 @@ function evaluateGrid(grid) {
   counts[symbol] = (counts[symbol] || 0) + 1;
 }
       }
-    }
+    
 
     for (const count of Object.values(counts)) {
       if (count >= 3) {
