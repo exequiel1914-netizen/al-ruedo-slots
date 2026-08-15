@@ -1,4 +1,5 @@
-// reels.js - manejo simple de function getRandomSymbol(symbols) {
+// reels.js - manejo simple de reels
+function getRandomSymbol(symbols) {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
