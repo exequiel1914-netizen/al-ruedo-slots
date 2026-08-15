@@ -243,16 +243,30 @@ async function onSpin() {
 
   const result = evaluateGrid(getGrid());
 
-  if (result.bonusCount >= 3) {
-  audio.play('bonus');
-    reelsContainer.classList.add('bonus-hit');
+  if if (result.bonusCount >= 3) {
+  let bonusMultiplier = 10;
 
-setTimeout(() => {
-  reelsContainer.classList.remove('bonus-hit');
-}, 1800);
+  if (result.bonusCount === 4) {
+    bonusMultiplier = 20;
+  } else if (result.bonusCount >= 5) {
+    bonusMultiplier = 50;
+  }
+
+  const bonusWin = bet * bonusMultiplier;
+
+  credits += bonusWin;
+  updateCreditsDisplay();
+
+  audio.play('bonus');
+
+  reelsContainer.classList.add('bonus-hit');
+
+  setTimeout(() => {
+    reelsContainer.classList.remove('bonus-hit');
+  }, 1800);
 
   showMessage(
-    `💥 BONUS! ${result.bonusCount} LOGOS 💥`,
+    `💥 BONUS x${bonusMultiplier}! +${bonusWin} CRÉDITOS 💥`,
     3000
   );
 
