@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="keyG" x1="0" x2="1"><stop offset="0" stop-color="#eaffff"/><stop offset="1" stop-color="#022f36"/></linearGradient>
+  </defs>
+
+  <!-- recognizable open-ended wrench shape -->
+  <path d="M36 112 L110 46 L132 64 L108 86 L126 104 L104 128 L80 106 L36 150 Z"
+        fill="url(#keyG)" stroke="#0aa6ff" stroke-width="2"/>
+  <!-- ring hole -->
+  <circle cx="126" cy="106" r="10" fill="#031617" stroke="#0aa6ff" stroke-width="1.6"/>
+</svg>

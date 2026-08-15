@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="motorG" x1="0" x2="1"><stop offset="0" stop-color="#dffbff"/><stop offset="1" stop-color="#012a32"/></linearGradient>
+  </defs>
+
+  <!-- block -->
+  <rect x="18" y="44" width="164" height="70" rx="10" fill="#04171a" stroke="#0aa6ff" stroke-width="2"/>
+  <!-- cylinders -->
+  <g transform="translate(36,56)" fill="url(#motorG)" stroke="#0aa6ff" stroke-width="1.2">
+    <rect x="0" y="0" width="36" height="46" rx="4"/>
+    <rect x="44" y="0" width="36" height="46" rx="4"/>
+    <rect x="88" y="0" width="36" height="46" rx="4"/>
+  </g>
+  <!-- pipes / bolts -->
+  <g transform="translate(28,118)" fill="#021618" stroke="#0aa6ff" stroke-width="1.6">
+    <circle cx="12" cy="6" r="6"/>
+    <circle cx="136" cy="6" r="6"/>
+  </g>
+</svg>

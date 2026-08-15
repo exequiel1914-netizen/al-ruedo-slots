@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="sevenGrad" x1="0" x2="1"><stop offset="0" stop-color="#e7fbff"/><stop offset="1" stop-color="#012f45"/></linearGradient>
+  </defs>
+
+  <rect x="16" y="18" width="168" height="164" rx="18" fill="#041425" stroke="#04384f" stroke-width="3"/>
+  <text x="100" y="128" font-size="110" font-weight="900" text-anchor="middle" font-family="Impact, Arial" fill="url(#sevenGrad)" stroke="#0aa6ff" stroke-width="3">7</text>
+  <path class="glint" d="M72 48 C94 40 124 40 144 50" fill="none" stroke="#dffbff" stroke-width="2" opacity="0.9"/>
+</svg>

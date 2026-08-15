@@ -2,7 +2,7 @@ import Reels from './reels.js';
 import { AudioManager, UI } from './ui.js';
 
 const SYMBOLS = [
-  'moto','casco','rueda','herramienta','estrella','logo-bonus'
+  'moto','casco','rueda','motor','llave','billetes','siete','logo-bonus'
 ];
 
 const startCredits = 1000;
