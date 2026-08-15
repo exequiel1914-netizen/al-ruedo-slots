@@ -1,19 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260">
   <defs>
-    <linearGradient id="cascoShell" x1="0" x2="1">
-      <stop offset="0" stop-color="#bff6ff"/>
-      <stop offset="1" stop-color="#04324a"/>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#55d7ff"/>
+      <stop offset=".45" stop-color="#078fd3"/>
+      <stop offset="1" stop-color="#003e73"/>
     </linearGradient>
-    <linearGradient id="visorGrad" x1="0" x2="1"><stop offset="0" stop-color="#eaffff"/><stop offset="1" stop-color="#0a6ea0"/></linearGradient>
+
+    <linearGradient id="visor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9f7ff"/>
+      <stop offset=".35" stop-color="#65cbe9"/>
+      <stop offset="1" stop-color="#102b3b"/>
+    </linearGradient>
   </defs>
 
-  <!-- shell -->
-  <path d="M30 84 C30 46 94 32 148 46 C156 50 162 60 162 70 C162 112 132 136 92 136 C56 136 30 112 30 84 Z"
-        fill="url(#cascoShell)" stroke="#0aa6ff" stroke-width="2.4"/>
-  <!-- visor -->
-  <path id="visor" d="M52 96 C82 84 118 82 146 96 L146 110 C118 106 82 108 52 110 Z" fill="url(#visorGrad)" stroke="#dffbff" stroke-width="1.2"/>
-  <!-- strap and chin -->
-  <rect x="60" y="118" width="80" height="6" rx="3" fill="#071623" opacity="0.85" />
-  <!-- highlights for small-size legibility -->
-  <path class="glint" d="M68 74 C90 66 120 66 138 74" fill="none" stroke="#e6fdff" stroke-width="1.4" opacity="0.95"/>
+  <!-- CASCO -->
+  <path d="M54 132
+           C54 67 100 30 165 30
+           C225 30 260 68 263 119
+           C265 145 253 169 232 184
+           L219 220
+           L150 220
+           L137 192
+           L94 188
+           C68 181 54 159 54 132 Z"
+        fill="url(#shell)"
+        stroke="#8de5ff"
+        stroke-width="7"/>
+
+  <!-- VISOR -->
+  <path d="M95 82
+           C132 55 194 54 232 78
+           C241 84 247 94 249 105
+           L214 126
+           L112 126
+           C102 126 96 120 95 110 Z"
+        fill="url(#visor)"
+        stroke="#d6f7ff"
+        stroke-width="6"/>
+
+  <!-- REFLEJO VISOR -->
+  <path d="M116 78
+           C145 65 180 63 207 70"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity=".75"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <!-- MENTONERA -->
+  <path d="M137 132
+           L238 132
+           L226 181
+           L199 198
+           L146 193
+           L128 169 Z"
+        fill="#075e91"
+        stroke="#68d8ff"
+        stroke-width="6"/>
+
+  <!-- ENTRADA DE AIRE -->
+  <path d="M164 165
+           L207 165
+           L198 178
+           L169 178 Z"
+        fill="#071923"/>
+
+  <!-- BORDE INFERIOR -->
+  <path d="M145 219
+           C167 228 199 227 220 217"
+        fill="none"
+        stroke="#101b22"
+        stroke-width="10"
+        stroke-linecap="round"/>
+
+  <!-- DETALLE -->
+  <path d="M74 137
+           C78 158 89 170 108 178"
+        fill="none"
+        stroke="#bcefff"
+        stroke-width="5"
+        stroke-linecap="round"/>
 </svg>
