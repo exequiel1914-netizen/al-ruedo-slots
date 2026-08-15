@@ -275,3 +275,54 @@ body{
   .topbar .balance{
 
     font-size:17px;
+/* ===== BOTONES SECUNDARIOS METALLIC BLUE ===== */
+
+.btn.small{
+
+  background:
+
+    linear-gradient(180deg,#132532 0%,#0b1821 55%,#071016 100%);
+
+  border:1px solid rgba(54,190,255,.28);
+
+  color:#dff7ff;
+
+  box-shadow:
+
+    0 5px 12px rgba(0,0,0,.35),
+
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  text-shadow:0 1px 3px rgba(0,0,0,.55);
+
+}
+
+.btn.small:active{
+
+  transform:translateY(1px);
+
+  background:
+
+    linear-gradient(180deg,#0c6da5,#083b5a);
+
+  border-color:rgba(90,210,255,.55);
+
+}
+
+#betInc,
+
+#betDec{
+
+  color:#72d8ff;
+
+  font-size:19px;
+
+}
+
+#mute,
+
+#info{
+
+  border-color:rgba(54,190,255,.22);
+
+}
