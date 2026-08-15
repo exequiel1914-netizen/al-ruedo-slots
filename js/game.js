@@ -245,6 +245,11 @@ async function onSpin() {
 
   if (result.bonusCount >= 3) {
   audio.play('bonus');
+    reelsContainer.classList.add('bonus-hit');
+
+setTimeout(() => {
+  reelsContainer.classList.remove('bonus-hit');
+}, 1800);
 
   showMessage(
     `💥 BONUS! ${result.bonusCount} LOGOS 💥`,
