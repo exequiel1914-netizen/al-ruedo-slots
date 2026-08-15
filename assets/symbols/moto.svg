@@ -1,7 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="12" fill="#0f1113" />
-  <g fill="#e6e9eb">
-    <path d="M30 80c0-22 30-22 30-40s-30-18-30-2v42z" fill="#ff5e1a" />
-    <rect x="38" y="54" width="44" height="10" rx="5" fill="#9aa0a6" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b5560"/>
+      <stop offset=".45" stop-color="#111820"/>
+      <stop offset="1" stop-color="#7b8791"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00c8ff"/>
+      <stop offset=".55" stop-color="#007cff"/>
+      <stop offset="1" stop-color="#003f9e"/>
+    </linearGradient>
+
+    <radialGradient id="lamp">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".35" stop-color="#b9f3ff"/>
+      <stop offset="1" stop-color="#00aaff"/>
+    </radialGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- sombra -->
+  <ellipse cx="100" cy="174" rx="60" ry="10"
+           fill="#000" opacity=".65"/>
+
+  <!-- rueda trasera -->
+  <circle cx="55" cy="145" r="27"
+          fill="#05070a" stroke="#59636d" stroke-width="7"/>
+  <circle cx="55" cy="145" r="15"
+          fill="#101820" stroke="#00aaff" stroke-width="3"/>
+
+  <!-- rueda delantera -->
+  <circle cx="145" cy="145" r="27"
+          fill="#05070a" stroke="#59636d" stroke-width="7"/>
+  <circle cx="145" cy="145" r="15"
+          fill="#101820" stroke="#00aaff" stroke-width="3"/>
+
+  <!-- chasis -->
+  <path d="M58 137
+           L78 104
+           L121 103
+           L143 136
+           L127 142
+           L110 120
+           L78 120
+           L68 142 Z"
+        fill="url(#metal)"
+        stroke="#05070a"
+        stroke-width="4"/>
+
+  <!-- carenado -->
+  <path d="M82 103
+           L91 65
+           Q100 52 111 65
+           L123 105
+           L112 121
+           L87 120 Z"
+        fill="#0a1017"
+        stroke="#34404a"
+        stroke-width="4"/>
+
+  <!-- azul Al Ruedo -->
+  <path d="M89 101
+           L96 72
+           Q101 65 107 72
+           L115 102
+           L108 111
+           L95 111 Z"
+        fill="url(#blue)"/>
+
+  <!-- frente -->
+  <path d="M93 66
+           Q100 53 108 66
+           L112 82
+           L89 82 Z"
+        fill="#111820"
+        stroke="#59636d"
+        stroke-width="3"/>
+
+  <!-- faro -->
+  <path d="M93 79
+           Q101 73 109 79
+           L106 89
+           L96 89 Z"
+        fill="url(#lamp)"
+        filter="url(#glow)"/>
+
+  <!-- manubrio -->
+  <path d="M91 65 L73 57 M109 65 L127 57"
+        stroke="#87939d"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <path d="M72 57 L66 61 M128 57 L134 61"
+        stroke="#00aaff"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- asiento -->
+  <path d="M76 103
+           Q100 94 124 103
+           L118 113
+           L82 113 Z"
+        fill="#090b0e"
+        stroke="#303943"
+        stroke-width="3"/>
+
+  <!-- detalles eléctricos -->
+  <path d="M70 124 L84 116"
+        stroke="#00bfff"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <path d="M130 124 L116 116"
+        stroke="#00bfff"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- insignia -->
+  <circle cx="100" cy="101" r="8"
+          fill="#05070a"
+          stroke="#00bfff"
+          stroke-width="2"/>
+
+  <text x="100" y="105"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="8"
+        font-weight="700"
+        fill="#ffffff">AR</text>
 </svg>
