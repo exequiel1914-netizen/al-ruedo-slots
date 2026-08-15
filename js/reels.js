@@ -51,15 +51,26 @@ export default class Reels{
   }
 
   // Spin reel index with duration in ms. We simulate by rapidly changing symbols then stop on target
+  // Minimal visual improvements added: progressive deceleration (fewer changes toward end)
+  // and a small "impact" class applied to the middle slot when the reel stops.
   spinReel(index,duration=1000){
     return new Promise((resolve)=>{
       const reel = this.reelEls[index];
-      const interval = 80; // change every 80ms
       const start = performance.now();
       const slots = Array.from(reel.children);
-      let timer = null;
-      function step(t){
-        if(t - start >= duration){
+      let raf = null;
+
+      // ensure no leftover classes
+      reel.classList.remove('stopped');
+      slots.forEach(s => s.classList.remove('impact'));
+
+      const middleIndex = Math.floor(slots.length/2);
+
+      const step = (t)=>{
+        const elapsed = t - start;
+        const progress = Math.min(1, elapsed / duration);
+
+        if(elapsed >= duration){
           // stop: choose final symbols for each slot
           for(let r=0;r<slots.length;r++){
             const final = this.randomSymbol();
@@ -69,19 +80,45 @@ export default class Reels{
             // update visible
             this.visible[r][index] = final;
           }
+
+          // visual cue: mark reel stopped and pulse the central visible slot
+          reel.classList.add('stopped');
+          const midSlot = slots[middleIndex];
+          if(midSlot){
+            midSlot.classList.add('impact');
+            // remove impact after the pulse
+            setTimeout(()=>{
+              midSlot.classList.remove('impact');
+              // keep 'stopped' a little longer for focus (then remove)
+              setTimeout(()=>reel.classList.remove('stopped'), 260);
+            }, 220);
+          } else {
+            // ensure we still resolve
+            setTimeout(()=>reel.classList.remove('stopped'), 260);
+          }
+
           resolve(true);
           return;
         }
-        // change symbols randomly
+
+        // Progressive deceleration: higher change rate at start, lower near end.
+        // We implement by changing a slot only if a random check passes based on progress.
+        // This only affects visuals (which symbols flip during the spin) and NOT the final result.
+        const changeProbability = 1 - Math.pow(progress, 2.2); // near 0 at end
+
         for(let r=0;r<slots.length;r++){
-          const img = slots[r].querySelector('img');
-          const s = this.randomSymbol();
-          img.src = `assets/symbols/${s}.svg`;
-          img.alt = s;
+          if(Math.random() < changeProbability){
+            const img = slots[r].querySelector('img');
+            const s = this.randomSymbol();
+            img.src = `assets/symbols/${s}.svg`;
+            img.alt = s;
+          }
         }
-        timer = window.requestAnimationFrame(step.bind(this));
-      }
-      timer = window.requestAnimationFrame(step.bind(this));
+
+        raf = window.requestAnimationFrame(step);
+      };
+
+      raf = window.requestAnimationFrame(step);
     });
   }
 
