@@ -195,3 +195,8 @@ body{
     transform:translateY(-35px);
   }
 }
+@media (max-width:600px){
+  .controls{
+    transform:translateY(-60px);
+  }
+}
