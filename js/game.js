@@ -243,7 +243,7 @@ async function onSpin() {
 
   const result = evaluateGrid(getGrid());
 
-  if if (result.bonusCount >= 3) {
+  if (result.bonusCount >= 3) {
   audio.play('bonus');
 
   showMessage(
@@ -265,25 +265,7 @@ async function onSpin() {
 } else {
   showMessage('No hay combinación', 1200);
 }
-    credits += result.totalWin;
-    updateCreditsDisplay();
-
-    audio.play('win');
-
-    showMessage(
-      `Ganaste ${result.totalWin} (x${result.multiplier})`,
-      2000
-    );
-  } else if (result.bonusCount >= 3) {
-    audio.play('bonus');
-
-    showMessage(
-      `BONUS ${result.bonusCount} logos!`,
-      2500
-    );
-  } else {
-    showMessage('No hay combinación', 1200);
-  }
+    
 
   isSpinning = false;
 
