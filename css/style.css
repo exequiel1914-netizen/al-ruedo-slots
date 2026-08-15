@@ -341,7 +341,7 @@ body{
 .reel.spinning img.symbol{
   animation: reel-spin-motion 110ms linear infinite;
   filter:
-    blur(.7px)
+    blur(.25px)
     brightness(1.08)
     drop-shadow(0 7px 12px rgba(0,150,255,.28));
   will-change: transform, filter;
